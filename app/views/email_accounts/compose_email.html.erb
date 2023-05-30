@@ -1,0 +1,27 @@
+
+
+<%= link_to 'Inbox', email_accounts_path, class: 'btn btn-primary' %>
+<%= link_to 'Logout', logout_path, method: :delete %>
+
+<h1>Send Email</h1>
+
+<%= form_for :email, url: send_email_path , method: :post do |f| %>
+  <div class="field">
+    <%= f.label :to %>
+    <%= f.text_field :to , required: true%>
+  </div>
+
+  <div class="field">
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body , required: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

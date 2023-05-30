@@ -1,0 +1,27 @@
+<h1>Email Account Configuration</h1>
+emailappuser00001@gmail.com
+
+
+yvmljvbjzwgiswuf
+
+<%= form_with(model: @email_account, url: email_accounts_path, local: true) do |form| %>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email , required: true %>
+  </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password , required: true %>
+  </div>
+
+   <div>
+    <%= form.label "Email Provider" %>
+    <%= form.select :imap_server, EmailAccount.imap_servers.keys.map { |key| [key.titleize, key] }, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Save" %>
+  </div>
+<% end %>
