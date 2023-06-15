@@ -30,3 +30,7 @@ Setup ruby on rails environment with above mentioned versions
 5. Goto the webpage http://localhost:3000/ (incase if other port number please use your port number instead of 3000)
 
    TEST SOLUTION 🎊
+
+
+   Important: This was implemented just to test the process for my own understanding. There are many thing that could be improved but i thought i should provide this raw code just to give you an idea how i usually learn somehting new and test it for my understanding when i am curious.
+   
