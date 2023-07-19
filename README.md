@@ -1,36 +1,79 @@
-# README
+# Email Task Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Email Task Application is a simple Ruby on Rails web application that allows users to manage their email accounts and send/receive emails through the application. It uses the `net-imap` gem to interact with IMAP servers for fetching emails and the built-in `net/smtp` library for sending emails.
 
-Things you may want to cover:
+## Table of Contents
 
-* Ruby version  2.7.1
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+## Getting Started
 
-* Rails version "~> 7.0.4", ">= 7.0.4.2"
+To get a local copy of the application up and running, follow the installation instructions below.
 
+## Prerequisites
 
-# TASK EXPLANATION:
+Before running the application, make sure you have the following installed:
 
-I implemented this code few days ago just to test how can i access any user email from external application.
-In this task following features are implemented
+- Ruby 2.7.1
+- Ruby on Rails 7.0.4
+- PostgreSQL
+- Bundler
 
-1. User can login using their email address but he has to first create a password from their gmail account.( This is only implemented for gmail right now).
-2. after login, user will be redirected to their an "inbox" page where he can check all his emails.
-3. On onbox page i added a link to " send email" to send an email to any other email address.
-4. These features can only be accessible after login.
-5. Basic validations are implemented.
+## Installation
 
-## How to run this:
-Setup ruby on rails environment with above mentioned versions
-1. Clone this repo
-2. run "bundle install"
-3. run db:setup and run db:migrate
-4. run "rails s"
-5. Goto the webpage http://localhost:3000/ (incase if other port number please use your port number instead of 3000)
+1. Clone the repository to your local machine:
 
-   TEST SOLUTION 🎊
+```
+git clone https://github.com/your_username/email_task.git
+```
 
+2. Change directory to the project folder:
 
-   Important: This was implemented just to test the process for my own understanding. There are many thing that could be improved but i thought i should provide this raw code just to give you an idea how i usually learn somehting new and test it for my understanding when i am curious.
-   
+```
+cd email_task
+```
+
+3. Install the required gems:
+
+```
+bundle install
+```
+
+4. Set up the database:
+
+```
+rails db:create
+rails db:migrate
+```
+
+## Usage
+
+1. Start the Rails server:
+
+```
+rails server
+```
+
+2. Open your web browser and navigate to `http://localhost:3000`.
+
+3. Create a new email account by clicking on "Email Account Configuration" and filling in the required information.
+
+4. After adding an email account, you will be redirected to the Inbox page, where you can view and manage your emails.
+
+5. To compose a new email, click on "Send Email" from the Inbox page and fill in the recipient, subject, and body of the email.
+
+## Features
+
+- Add and manage multiple email accounts with different IMAP servers (Gmail, Hotmail, iCloud).
+- Fetch emails from the selected email account using IMAP.
+- Compose and send emails through the application using SMTP.
+- View emails in the Inbox and check details like subject, body, sender, and creation date.
+- Log out from the current email account.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or want to add new features, please create an issue or submit a pull request with your changes.
